@@ -1,0 +1,9 @@
+C:\Users\k1\Desktop\flowchart\flowchart\bin\Debug\flowchart.exe.config
+C:\Users\k1\Desktop\flowchart\flowchart\bin\Debug\flowchart.exe
+C:\Users\k1\Desktop\flowchart\flowchart\bin\Debug\flowchart.pdb
+C:\Users\k1\Desktop\flowchart\flowchart\obj\Debug\flowchart.csprojResolveAssemblyReference.cache
+C:\Users\k1\Desktop\flowchart\flowchart\obj\Debug\flowchart.Properties.Resources.resources
+C:\Users\k1\Desktop\flowchart\flowchart\obj\Debug\flowchart.csproj.GenerateResource.Cache
+C:\Users\k1\Desktop\flowchart\flowchart\obj\Debug\flowchart.exe
+C:\Users\k1\Desktop\flowchart\flowchart\obj\Debug\flowchart.pdb
+C:\Users\k1\Desktop\flowchart\flowchart\obj\Debug\dinamikPictureBox.Form1.resources
