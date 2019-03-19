@@ -638,9 +638,9 @@ namespace dinamikPictureBox
                         yazi.Close();
                     }
 
-
+                    button1.Visible = true;
                 }
-
+                
             }
             catch (Exception hata)
             {
@@ -660,6 +660,11 @@ namespace dinamikPictureBox
         public void calistirBtn()
         {
             calistir.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("kodlar.xml");
         }
     }
 
