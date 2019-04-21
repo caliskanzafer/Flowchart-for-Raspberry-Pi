@@ -1,4 +1,4 @@
-﻿namespace dinamikPictureBox
+﻿namespace flowchart
 {
     partial class Form1
     {
@@ -33,7 +33,6 @@
             this.kaydet = new System.Windows.Forms.Button();
             this.dongu_lb2 = new System.Windows.Forms.Label();
             this.karar_tx2 = new System.Windows.Forms.Label();
-            this.dongu_cb1 = new System.Windows.Forms.ComboBox();
             this.karar_tx1 = new System.Windows.Forms.Label();
             this.calistir = new System.Windows.Forms.Button();
             this.islem_cb3 = new System.Windows.Forms.ComboBox();
@@ -43,7 +42,6 @@
             this.karar_cb3 = new System.Windows.Forms.ComboBox();
             this.islem_GroupBox = new System.Windows.Forms.GroupBox();
             this.islem_lb1 = new System.Windows.Forms.Label();
-            this.islem_cb1 = new System.Windows.Forms.ComboBox();
             this.islem_bt1 = new System.Windows.Forms.Button();
             this.karar_cb4 = new System.Windows.Forms.ComboBox();
             this.karar_cb5 = new System.Windows.Forms.ComboBox();
@@ -61,6 +59,7 @@
             this.karar_cb2 = new System.Windows.Forms.ComboBox();
             this.karar_cb1 = new System.Windows.Forms.ComboBox();
             this.dongu_GroupBox = new System.Windows.Forms.GroupBox();
+            this.dongu_cb1 = new System.Windows.Forms.ComboBox();
             this.dongu_lb3 = new System.Windows.Forms.Label();
             this.dongu_tx1 = new System.Windows.Forms.TextBox();
             this.karar_GroupBox = new System.Windows.Forms.GroupBox();
@@ -84,7 +83,7 @@
             this.basla_tx1 = new System.Windows.Forms.TextBox();
             this.basla_lb1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.xmlAc = new System.Windows.Forms.Button();
             this.islem_GroupBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.basla)).BeginInit();
@@ -137,21 +136,6 @@
             this.karar_tx2.TabIndex = 12;
             this.karar_tx2.Text = "Değer";
             // 
-            // dongu_cb1
-            // 
-            this.dongu_cb1.FormattingEnabled = true;
-            this.dongu_cb1.Items.AddRange(new object[] {
-            "Byte",
-            "Short",
-            "İnteger",
-            "Long",
-            "Float",
-            "Double"});
-            this.dongu_cb1.Location = new System.Drawing.Point(100, 37);
-            this.dongu_cb1.Name = "dongu_cb1";
-            this.dongu_cb1.Size = new System.Drawing.Size(58, 21);
-            this.dongu_cb1.TabIndex = 19;
-            // 
             // karar_tx1
             // 
             this.karar_tx1.AutoSize = true;
@@ -163,14 +147,10 @@
             // 
             // calistir
             // 
-            this.calistir.Location = new System.Drawing.Point(1070, 528);
+            this.calistir.Location = new System.Drawing.Point(0, 0);
             this.calistir.Name = "calistir";
             this.calistir.Size = new System.Drawing.Size(75, 23);
-            this.calistir.TabIndex = 23;
-            this.calistir.Text = "XML Oluştur";
-            this.calistir.UseVisualStyleBackColor = true;
-            this.calistir.Visible = false;
-            this.calistir.Click += new System.EventHandler(this.calistir_Click);
+            this.calistir.TabIndex = 44;
             // 
             // islem_cb3
             // 
@@ -215,7 +195,10 @@
             this.karar_cb3.FormattingEnabled = true;
             this.karar_cb3.Items.AddRange(new object[] {
             "<",
-            ">"});
+            ">",
+            "<=",
+            ">=",
+            "=="});
             this.karar_cb3.Location = new System.Drawing.Point(68, 32);
             this.karar_cb3.Name = "karar_cb3";
             this.karar_cb3.Size = new System.Drawing.Size(52, 21);
@@ -226,7 +209,6 @@
             this.islem_GroupBox.Controls.Add(this.islem_lb1);
             this.islem_GroupBox.Controls.Add(this.islem_tx1);
             this.islem_GroupBox.Controls.Add(this.islem_cb3);
-            this.islem_GroupBox.Controls.Add(this.islem_cb1);
             this.islem_GroupBox.Controls.Add(this.islem_lb2);
             this.islem_GroupBox.Controls.Add(this.islem_cb4);
             this.islem_GroupBox.Controls.Add(this.islem_cb2);
@@ -247,14 +229,6 @@
             this.islem_lb1.Name = "islem_lb1";
             this.islem_lb1.Size = new System.Drawing.Size(0, 17);
             this.islem_lb1.TabIndex = 35;
-            // 
-            // islem_cb1
-            // 
-            this.islem_cb1.FormattingEnabled = true;
-            this.islem_cb1.Location = new System.Drawing.Point(123, 31);
-            this.islem_cb1.Name = "islem_cb1";
-            this.islem_cb1.Size = new System.Drawing.Size(52, 21);
-            this.islem_cb1.TabIndex = 34;
             // 
             // islem_bt1
             // 
@@ -431,11 +405,11 @@
             // 
             // dongu_GroupBox
             // 
+            this.dongu_GroupBox.Controls.Add(this.dongu_cb1);
             this.dongu_GroupBox.Controls.Add(this.dongu_lb3);
             this.dongu_GroupBox.Controls.Add(this.dongu_tx1);
             this.dongu_GroupBox.Controls.Add(this.dongu_lb1);
             this.dongu_GroupBox.Controls.Add(this.dongu_lb2);
-            this.dongu_GroupBox.Controls.Add(this.dongu_cb1);
             this.dongu_GroupBox.Location = new System.Drawing.Point(941, 18);
             this.dongu_GroupBox.Name = "dongu_GroupBox";
             this.dongu_GroupBox.Size = new System.Drawing.Size(200, 128);
@@ -443,6 +417,14 @@
             this.dongu_GroupBox.TabStop = false;
             this.dongu_GroupBox.Text = "dongu_GroupBox";
             this.dongu_GroupBox.Visible = false;
+            // 
+            // dongu_cb1
+            // 
+            this.dongu_cb1.FormattingEnabled = true;
+            this.dongu_cb1.Location = new System.Drawing.Point(100, 37);
+            this.dongu_cb1.Name = "dongu_cb1";
+            this.dongu_cb1.Size = new System.Drawing.Size(58, 21);
+            this.dongu_cb1.TabIndex = 45;
             // 
             // dongu_lb3
             // 
@@ -669,16 +651,16 @@
             this.label1.TabIndex = 42;
             this.label1.Text = resources.GetString("label1.Text");
             // 
-            // button1
+            // xmlAc
             // 
-            this.button1.Location = new System.Drawing.Point(1070, 557);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "XML AÇ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.xmlAc.Location = new System.Drawing.Point(1070, 557);
+            this.xmlAc.Name = "xmlAc";
+            this.xmlAc.Size = new System.Drawing.Size(75, 23);
+            this.xmlAc.TabIndex = 43;
+            this.xmlAc.Text = "XML AÇ";
+            this.xmlAc.UseVisualStyleBackColor = true;
+            this.xmlAc.Visible = false;
+            this.xmlAc.Click += new System.EventHandler(this.xmlAc_Click);
             // 
             // Form1
             // 
@@ -686,7 +668,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 611);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.xmlAc);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.basla_GroupBox);
             this.Controls.Add(this.hataMesaji);
@@ -746,13 +728,11 @@
         private System.Windows.Forms.Button kaydet;
         private System.Windows.Forms.Label dongu_lb2;
         private System.Windows.Forms.Label karar_tx2;
-        private System.Windows.Forms.ComboBox dongu_cb1;
         private System.Windows.Forms.Label karar_tx1;
         private System.Windows.Forms.Button calistir;
         private System.Windows.Forms.ComboBox islem_cb3;
         private System.Windows.Forms.Label islem_lb2;
         private System.Windows.Forms.ComboBox islem_cb4;
-        private System.Windows.Forms.ComboBox islem_cb2;
         private System.Windows.Forms.ComboBox karar_cb3;
         private System.Windows.Forms.GroupBox islem_GroupBox;
         private System.Windows.Forms.Label dongu_lb1;
@@ -762,7 +742,6 @@
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.ComboBox karar_cb4;
         private System.Windows.Forms.ComboBox karar_cb5;
-        private System.Windows.Forms.ComboBox islem_cb1;
         private System.Windows.Forms.ComboBox karar_cb2;
         private System.Windows.Forms.ComboBox karar_cb1;
         private System.Windows.Forms.GroupBox dongu_GroupBox;
@@ -790,7 +769,9 @@
         private System.Windows.Forms.Label islem_lb1;
         private System.Windows.Forms.Label karar_lb5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button xmlAc;
+        public System.Windows.Forms.ComboBox islem_cb2;
+        private System.Windows.Forms.ComboBox dongu_cb1;
     }
 }
 
