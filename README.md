@@ -1,2 +1,3 @@
 # C#-Flowchart-for-Raspberry-Pi
-Application that prepares flowchart with Window Form Application for Raspberry Pi
+Akış diyagramı oluşturan ve bu diyagramı XML formatında kaydeden c# otomasyonu
+Raspberry Pi tarafı tamamlanamadı
